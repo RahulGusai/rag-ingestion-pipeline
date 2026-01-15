@@ -1,0 +1,48 @@
+# ----------------------------
+# Core server and environment
+# ----------------------------
+fastapi
+uvicorn[standard]
+gunicorn
+python-dotenv
+load_dotenv
+
+# ----------------------------
+# LlamaIndex / RAG core
+# ----------------------------
+llama-index
+openai
+tiktoken
+sentence-transformers
+torch
+
+# ----------------------------
+# Supabase client + utilities
+# ----------------------------
+supabase
+postgrest  # sometimes needed transitively
+gotrue     # for auth handling (optional, sometimes required)
+storage3   # supabase storage SDK backend (used internally)
+
+# ----------------------------
+# File parsing and text extraction
+# ----------------------------
+unstructured[all-docs]  # universal document parsing
+pypdf                   # robust PDF reading
+pypdf2                  # fallback PDF extractor
+python-docx             # fallback DOCX extractor (used in our parse_docx_bytes)
+beautifulsoup4          # unstructured dependency for HTML/text parsing
+lxml                    # improves XML performance (used by unstructured/docx fallback)
+python-magic            # mime-type detection (optional but recommended)
+
+# ----------------------------
+# Retry, concurrency, and logging
+# ----------------------------
+tenacity   # for retry logic on OpenAI embeddings
+loguru     # optional but highly recommended for structured logs
+
+# ----------------------------
+# Optional utilities (recommended for local dev / debugging)
+# ----------------------------
+requests
+aiofiles   # if serving files asynchronously
