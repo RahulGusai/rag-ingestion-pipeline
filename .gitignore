@@ -1,0 +1,87 @@
+##################################
+# Virtual Environments
+##################################
+rag-ingestion-pipeline/
+venv/
+.env
+.venv/
+
+##################################
+# Test & Local Data (EXPLICIT)
+##################################
+test_data/
+tests/__pycache__/
+
+##################################
+# Python Bytecode
+##################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+##################################
+# FastAPI / Uvicorn / Gunicorn
+##################################
+*.log
+uvicorn.log
+gunicorn.log
+nohup.out
+
+##################################
+# Pydantic / Caches
+##################################
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+##################################
+# Build & Distribution
+##################################
+build/
+dist/
+*.egg-info/
+.eggs/
+
+##################################
+# Jupyter / Experiments
+##################################
+.ipynb_checkpoints/
+
+##################################
+# OS Files
+##################################
+.DS_Store
+Thumbs.db
+
+##################################
+# IDE / Editor
+##################################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+##################################
+# Docker
+##################################
+*.pid
+docker-compose.override.yml
+
+##################################
+# Secrets & Credentials
+##################################
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json
+
+##################################
+# Misc
+##################################
+*.sqlite
+*.db
+*.tmp
